@@ -13,7 +13,7 @@ const ingredients = ["Tomatoes", "Onions", "Garlic", "Olive oil", "Salt"];
 console.log(ingredients);
 
 // TODO 2: log just the first ingredient
-console.log(ingredients[0]);
+console.log(ingredients[0]); 
 
 // TODO 3: log how many ingredients there are
 console.log(ingredients.length);
