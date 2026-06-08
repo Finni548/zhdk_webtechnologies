@@ -70,7 +70,6 @@
 // });
 
 // With Pictures
-// ...existing code...
 console.log("script loaded");
 
 const input = document.getElementById("search-input");
@@ -91,7 +90,6 @@ async function searchBooks(query) {
   return data.docs || [];
 }
 
-// ...existing code...
 function renderResults(books) {
   resultsEl.innerHTML = "";
   if (!books || books.length === 0) {
@@ -145,7 +143,6 @@ function renderResults(books) {
     resultsEl.appendChild(li);
   });
 }
-// ...existing code...
 
 async function handleSearch() {
   const query = input.value.trim();
@@ -164,4 +161,3 @@ button.addEventListener("click", handleSearch);
 input.addEventListener("keydown", (e) => {
   if (e.key === "Enter") handleSearch();
 });
-// ...existing code...
