@@ -1,0 +1,49 @@
+/* ...existing code... */
+
+/* nummerierte Blöcke in den Karten */
+.exercise-list {
+  /* startet den Zähler für die Liste */
+  counter-reset: exercise;
+}
+
+/* Platz links schaffen für den Block */
+.exercise-list li {
+  position: relative;
+  padding-left: 64px; /* genug Platz für den Block */
+}
+
+/* eigentlicher Block mit Nummer */
+.exercise-list li::before {
+  content: counter(exercise);
+  counter-increment: exercise;
+  position: absolute;
+  left: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 44px;
+  height: 44px;
+  background: var(--accent);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  font-weight: 700;
+  box-shadow: 0 2px 6px rgba(11, 114, 195, 0.18);
+  font-size: 0.95rem;
+}
+
+/* Platz-Optimierung auf kleinen Bildschirmen */
+@media (max-width: 420px) {
+  .exercise-list li {
+    padding-left: 48px;
+  }
+  .exercise-list li::before {
+    left: 12px;
+    width: 36px;
+    height: 36px;
+    font-size: 0.9rem;
+  }
+}
+
+/* ...existing code... */
